@@ -1,6 +1,6 @@
 # Maven build container 
 
-FROM maven:3.8.5-openjdk-11 AS maven_build
+FROM maven:3.8.7-amazoncorretto-17 AS maven_build
 
 COPY pom.xml /tmp/
 
@@ -15,7 +15,7 @@ RUN mvn package
 FROM openjdk
 
 #maintainer 
-MAINTAINER dstar55@yahoo.com
+MAINTAINER vh1ne
 #expose port 8080
 EXPOSE 8080
 
